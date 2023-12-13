@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog, modal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/392acbfbb6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="blurBackground"></div>
+
+    <header class="headerContent">
+      <button type="button" class="menuBtn" id="menuButton">
+        <i class="fa-solid fa-bars icon"></i>
+      </button>
+      <nav id="menuContent" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <button
+            type="button"
+            class="menuBtn"
+            id="closeMenuBtn"
+            aria-label="Close Menu"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <li><a href="#" aria-label="Home">Hem</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Tjänster</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--dialog-->
+      <button data-open-modal class="btn" type="button" id="myDialog">
+        Open Dialog
+      </button>
+      <button class="btn" type="button" id="myModal">Open Modal</button>
+      <br />
+      <br />
+      <dialog data-modal role="alertdialog" aria-labelledby="dialogTitle">
+        <h2 id="dialogTitle" class="openedTitle">
+          Exempel på tillgängligt modalfönster med &lt;dialog&gt;
+        </h2>
+        <p class="openedText">Här är innehållet i modalfönstret.</p>
+        <button data-close-modal class="btn">Stäng</button>
+      </dialog>
+      <!--modal-->
+      <div class="opened" id="accessibleModal" aria-labelledby="modalTitle">
+        <h2 id="modalTitle" class="openedTitle" >Exempel på modalfönster</h2>
+        <p class="openedText">Här är lite text i modalfönstret.</p>
+        <button class="closeBtn" id="closeModalBtn">Stäng</button>
+      </div>
+    </main>
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/dialog.js"></script>
+    <script src="scripts/blur.js"></script>
+  </body>
+</html>
